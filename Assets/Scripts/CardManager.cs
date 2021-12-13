@@ -53,7 +53,7 @@ public class CardManager : MonoBehaviour
         foreach (GameObject c in usedCards)
         {
             cards.Add(c);
-            c.GetComponent<Card>().Flip();
+            c.GetComponent<Card>().Flip(false);
             c.transform.position = cardPrefab.transform.position;
             c.SetActive(true);
         }
@@ -118,6 +118,6 @@ public class CardManager : MonoBehaviour
             yield return null;
         }
 
-        card.GetComponent<Card>().Flip();
+        card.GetComponent<Card>().Flip(true);
     }
 }

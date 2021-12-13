@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class Card : MonoBehaviour
+// INHERITANCE
+public class Card : GamePiece
 {
     private int suit;
     private int value;
@@ -69,6 +70,7 @@ public class Card : MonoBehaviour
         spriteRenderer.sprite = cardBack;
     }
 
+    // POLYMORPHISM
     public void Flip()
     {
         if (spriteRenderer.sprite == cardFront)
@@ -79,7 +81,25 @@ public class Card : MonoBehaviour
         {
             spriteRenderer.sprite = cardFront;
         }
-
+        
         flipSound.Play();
+    }
+
+    // POLYMORPHISM
+    public void Flip(bool playSound)
+    {
+        if (spriteRenderer.sprite == cardFront)
+        {
+            spriteRenderer.sprite = cardBack;
+        }
+        else
+        {
+            spriteRenderer.sprite = cardFront;
+        }
+
+        if (playSound)
+        {
+            flipSound.Play();
+        }
     }
 }

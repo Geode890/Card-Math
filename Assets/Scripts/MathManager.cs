@@ -47,8 +47,6 @@ public class MathManager : MonoBehaviour
             case 0:
                 return card1.GetValue() + card2.GetValue() == System.Convert.ToInt32(answer);
             case 1:
-                Debug.Log(card1.GetValue() - card2.GetValue());
-                Debug.Log(System.Convert.ToInt32(answer));
                 return card1.GetValue() - card2.GetValue() == System.Convert.ToInt32(answer);
             case 2:
                 return card1.GetValue() * card2.GetValue() == System.Convert.ToInt32(answer);

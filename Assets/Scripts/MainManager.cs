@@ -27,6 +27,7 @@ public class MainManager : MonoBehaviour
         currentRound = StartCoroutine(StartRound());
     }
 
+    // ABSTRACTION
     private IEnumerator StartRound()
     {
         SetMathOption();
