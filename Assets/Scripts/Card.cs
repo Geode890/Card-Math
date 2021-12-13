@@ -10,9 +10,12 @@ public class Card : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private AudioSource flipSound;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        flipSound = GetComponent<AudioSource>();
     }
 
     // ENCAPSULATION
@@ -68,7 +71,6 @@ public class Card : MonoBehaviour
 
     public void Flip()
     {
-        //Play sounds here
         if (spriteRenderer.sprite == cardFront)
         {
             spriteRenderer.sprite = cardBack;
@@ -77,5 +79,7 @@ public class Card : MonoBehaviour
         {
             spriteRenderer.sprite = cardFront;
         }
+
+        flipSound.Play();
     }
 }

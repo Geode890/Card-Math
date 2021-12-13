@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CardManager
   - UI
+  - MathManager
+  - ActiveCard
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ public class TitleScreenManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Main");
     }
 
     public void QuitGame()
